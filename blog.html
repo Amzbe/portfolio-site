@@ -1,3 +1,27 @@
 ---
 layout: default
+title: Blog page
 ---
+<section class="grid">
+  <div class="col-7">
+    <h2>{{page.subtitle}}</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+  <div class="col-3">
+    <img src="https://unsplash.it/600/300/?random" alt="My hover"/>
+  </div>
+</section>
+{% include fancyline.html %}
+<section class="grid">
+{% for post in site.posts %}
+<div class="col-3">
+  <a href="{{post.url}}">
+    <div style="background-image:url('{{post.pagepic}}')">
+    <h3> {{post.title}} </h3>
+    </div>
+  </a>
+</div>
+{% endfor %}
+</section>

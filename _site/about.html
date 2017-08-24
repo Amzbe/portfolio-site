@@ -2,42 +2,79 @@
 <html>
 <head>
   <!-- META DATA -->
-  <title>portfolio website</title>
+  <title>About</title>
   <!--STYLE SHEETS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.0/gridlex.min.css">
   <link rel="stylesheet" href="style.css" />
   <!--Scripts-->
-    <script src="https://use.fontawesome.com/ab1ceb66af.js"></script>
-</head>
+  <script src="https://use.fontawesome.com/ab1ceb66af.js"></script>
+
+    <!---add a scroll to the top button--->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Go to Top</button>
+    <script>
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+      } else {
+          document.getElementById("myBtn").style.display = "none";
+      }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
+  </script>
+  </head>
 <body>
   <header>
     <nav class="grid-spaceBetween">
-        <a class="col-2" href="index.html">Home</a>
-        <a class="col-2" href="about.html">About</a>
+        <a class="col-2" href="/index.html">Home</a>
+        <a class="col-2" href="/about.html">About</a>
         <h2 class="col-2">Blah</h2>
-        <a class="col-2" href="index.html#contact">Contact</a>
-        <a class="col-2" href="blog.html">Blog</a>
+        <a class="col-2" href="/index.html#contact">Contact</a>
+        <a class="col-2" href="/blog.html">Blog</a>
     </nav>
     <!-- add search abaility within site here-->
     <!-- banner section -->
-      <section class="grid-center banner">
-        <div class="col-6 centerText">
-          <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-          <a href="#"><i class="fa fa-hand-peace-o" aria-hidden="true"></i></a>
-        </div>
-      </section>
+    <section class="grid-center banner">
+      <div class="col-6 centerText">
+        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+        <a href="#"><i class="fa fa-hand-peace-o" aria-hidden="true"></i></a>
+      </div>
+    </section>
       <!--end of banner section -->
-      <img src="" alt="fancy line" />
-  </header>
-<!--end of header-->
+    <img src="/Images/fancy-line1.jpg" class="full-width" alt="fancy line" />
 
-<footer>
-  <nav>
-    <a href="http://facebook.com/beguma88"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-    <a href="http://instagram.com/amzbe88/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-    <a href="http://linkedin.com/in/beguma"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-    <a href="http://pinterest.co.uk/amzb/"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-  </nav>
-</footer>
+  </header>
+    <!--end of header-->
+    <section class="grid">
+  <div class="col-7">
+    <h2></h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+  <div class="col-3">
+    <img src="https://unsplash.it/600/300/?random" alt="My hover"/>
+  </div>
+</section>
+
+<img src="/Images/fancy-line1.jpg" class="full-width" alt="fancy line" />
+
+<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/cc1b9a5f430f50c08a1e3fc75275e1fd.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+
+    <footer>
+    <nav>
+      <a href="http://facebook.com/beguma88"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="http://instagram.com/amzbe88/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      <a href="http://linkedin.com/in/beguma"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      <a href="http://pinterest.co.uk/amzb/"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+    </nav>
+  </footer>
 </body>
 </html>
