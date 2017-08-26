@@ -1,38 +1,44 @@
 ---
 layout: default
 title: Homepage
+banner: Images/sunset.jpg
 ---
 <!-- start of about section -->
-<section class="about">
-  <h2>section title</h2>
+<section id="firstsection" class="about">
+  <h2>About...</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <a href="#"><i class="fa fa-hand-peace-o" aria-hidden="true"></i></a>
+  <div class="centerText">
+    <a href="#blog"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+  </div>
 </section>
 <!-- end of about section -->
-<section class="subscribe">
-<!--This will be a pop up subscribe form-->
-</section>
+<div class="subscribe offscreen">
+<h2>subscribe</h2>
+</div>
 <!-- section with images that link to pages -->
-<section class="pages grid-spaceBetween">
-  {% for post in site.posts %}
-  <div class="col-3 centerText style="background-image:url('{{post.pagepic}}')"">
-    <h2>{{post.title}}</h2>
-    <a href="{{post.href}}"><h3>{{<h3>post.linkname}}</h3></a>
-  </div>
+<section id="blog" class="pages grid-spaceAround">
+
+  {% for post in site.posts limit:3 %}
+  <a class="col-3" href="{{post.url}}">
+    <div class="centerText" style="background-image:url('{{post.pagepic}}')">
+      <h2>{{post.title}}</h2>
+      <h3>{{post.linkname}}</h3>
+    </div>
+  </a>
   {% endfor %}
-  <div class="centerText">
-    <a href="#"><i class="fa fa-hand-peace-o" aria-hidden="true"></i></a>
+  <div class="centerText col-12">
+    <a href="#quotes"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
   </div>
 </section>
 <!--End of images section -->
 {% include fancyline.html %}
 <!-- section with quote -->
-<section class="grid-center quotes">
+<section id="quotes" class="grid-center quotes">
   <div class="col-6 thequote">
-  {% include fancyline.html %}
+  <!-- {% include fancyline.html %} -->
     <h3>some sort of quote</h3>
-    {% include fancyline.html %}
-    <h3><a href="/quotes.html">more quotes page</a></h3>
+    <!-- {% include fancyline.html %} -->
+    <h3 class="rightText"><a class="button" href="/quotes.html">more</a></h3>
   </div>
 </section>
 {% include fancyline.html %}
@@ -48,7 +54,7 @@ title: Homepage
         <input class="col-8" type="text" name="name" placeholder="Your name">
         <input class="col-8" type="email" name="_replyto" placeholder="Your email">
         <textarea class="col-8" name="message" placeholder="Your message"></textarea>
-        <input class="col-8" type="submit" value="Send">
+        <input class="inputdiamond" type="submit" value="Send">
       </form>
     </div>
   </div>

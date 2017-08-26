@@ -1,10 +1,19 @@
 ---
 layout: default
-title: Quotes
+banner: /Images/iocquote.jpg
 ---
-<section class="grid">
-<div class="col-6>"
-
+<section id="firstsection" class=" reverser">
+{% for quotes in site.quotes %}
+<div class="grid">
+  <div class="bacground-image col-6" style="background-image:url('{{quotes.pic}}')">
+  </div>
+  <div class="col-6">
+    <h2>{{quotes.title}}</h2>
+    <p>{{quotes.quote}}</p>
+    <p>{{quotes.author}}</p>
+  </div>
+</div>
+{% endfor %}
 </section>
 
 <section class ="Pinterest">
@@ -13,5 +22,5 @@ title: Quotes
     async defer
     src="//assets.pinterest.com/js/pinit.js">
   </script>
-  <a data-pin-do="embedBoard" data-pin-board-width="600" data-pin-scale-height="100" data-pin-scale-width="80" href="https://www.pinterest.co.uk/amzb/triggers-of-thought/"></a>
+  <a data-pin-do="embedBoard" data-pin-board-width="600" data-pin-scale-height="200" data-pin-scale-width="80" href="https://www.pinterest.co.uk/amzb/triggers-of-thought/"></a>
 </section>

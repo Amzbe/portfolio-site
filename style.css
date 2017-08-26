@@ -1,22 +1,126 @@
-h2{
+/*resets*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img{
+  max-width: 100%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+/* universals*/
+
+section,footer{
+  padding: 2% 5% ;
+  position:relative;
+}
+
+nav{
+  text-align: center;
+}
+
+
+
+/*typography*/
+
+h1,h2,h3,h4,h5,h6{
   text-align:center;
 }
+h1{
+  font-size:2.5rem;
+}
+
+h2{
+  font-size:1.5rem;
+}
+
+h3{
+  font-size: 1.7rem;
+}
+
+/* modular classes*/
+
 .centerText{
   text-align:center;
+  background-size: cover;
+}
+
+.rightText{
+  text-align: right;
 }
 .blogpic{
 height: 20vw;
 }
+
 .full-width{
   width: 100%;
 }
+.fancyline{
+  display: block;
+  margin: auto;
+  width:300px;
+}
 
-#myBtn {
-  display: none;
+.button{
+  background-color:pink;
+  padding:2%;
+  border-radius:10px;
+  display:inline-block;
+  font-size: 16px;
+}
+
+#blog h2, .blog h3{
+  background-size: contain;
+
+  min-height: 23vw;
+  }
+
+
+/*header*/
+
+.banner{
+  background-size: cover;
+  background-position: bottom;
+  position:relative;
+  z-index: 99;
+  min-height: 100vh;
+  padding:0;
+}
+
+.lowerbanner{
+  min-height: calc(100vh - 123px);
+}
+
+.lowerbanner .centerText{
+  padding:0;
+}
+
+.fa-angle-double-down {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 5px;
+  color:grey;
+  left: calc(50vw - 0.7rem);
+}
+
+.banner .fa-angle-double-down {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 5px;
+  color:grey;
+  left: calc(50vw - 1.2rem);
+}
+
+/* footer*/
+a.top-button {
   position: fixed;
   bottom: 20px;
   right: 30px;
-  z-index: 99;
+  z-index: 45;
   border: none;
   outline: none;
   background-color: pink;
@@ -26,6 +130,132 @@ height: 20vw;
   border-radius: 10px;
 }
 
-#myBtn:hover {
+a.top-button:hover {
   background-color: #555;
+}
+
+form{
+  position: relative;
+}
+
+.inputdiamond{
+  position: absolute;
+bottom: -22px;
+right: 16vw;
+}
+
+/* quote section*/
+
+.reverser .grid:nth-child(odd){
+  flex-direction: row-reverse;
+}
+
+.Pinterest > span{
+    width:548px!important;
+    margin:auto;
+}
+
+/*hamburger menu*/
+
+.burger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: #f9f9f9;
+    padding:5px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 99999999;
+}
+.burger-menu a {
+  text-decoration: none;
+  padding: 15px 11px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #C3BFBC;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  display:block;
+  padding:5px 15px;
+  text-align:center;
+  white-space:nowrap;
+}
+.burger-menu li{list-style:none}
+/* this is where you style the button if you want to add more space between the spans than add padding to this div but make sure you also add it to the top and bottom active classes on there top/bottom or else your cross wont line up*/
+.burger-button {
+  position:fixed;
+  top: 2vh;
+  right: 2vh;
+  z-index: 9999999999;
+  padding: 8px;
+}
+/*this is where you can chand the color of the buttons*/
+.burger-button span{
+  width: 25px;
+  border: 2px solid black;
+  background-color: black;
+  display: block;
+  border-radius: 22px;
+  transition: 2s;
+}
+.burger-top, .burger-bottom{
+  position: absolute;
+}
+.burger-top{
+  top: 02px;
+}
+.burger-bottom{
+  bottom: 02.5px;
+}
+
+/* target the burger top when the button has the active class and give it a transform: rotateZ(45deg);*/
+.active .burger-top{
+  transform: rotateZ(45deg);
+  top:8px;
+  border-color:green;
+}
+
+
+/* now do the same f
+or the bottom but with a negitive rotate */
+.active .burger-bottom{
+  transform: rotateZ(-45deg);
+  bottom:8px;
+}
+
+
+/* now press your button and see whats wrong? go back and add a top to the .burger-top on active to push it down and a bottom to the .burger-bottom to push it up */
+
+/*.subscribe{
+  position:fixed;
+  bottom: 5px;
+  left:-100%;
+  transition: 2s
+}
+
+.offscreen{
+left:5px;
+}*/
+
+
+/* now try and make the middle line disapeare */
+
+.active .burger-middle{
+  opacity: 0;
+}
+/*media for hamburger*/
+.mob-show{
+  display:none;
+}
+@media all and (max-width:465px){
+  .mob-hide{
+    display:none;
+  }
+
+  .mob-show{
+    display:block;
+  }
+
+
 }

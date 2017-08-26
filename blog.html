@@ -14,11 +14,11 @@ title: Blog page
   </div>
 </section>
 {% include fancyline.html %}
-<section class="grid">
+<section class="grid-spaceAround">
 {% for post in site.posts %}
-<div class="col-3">
+<div class="col-3 blog">
   <a href="{{post.url}}">
-    <div style="background-image:url('{{post.pagepic}}')">
+    <div class ="centerText" style="background-image:url('{{post.pagepic}}')">
     <h3> {{post.title}} </h3>
     </div>
   </a>
