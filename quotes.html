@@ -2,12 +2,13 @@
 layout: default
 banner: /Images/iocquote.jpg
 ---
+{% include fancyline.html %}
 <section id="firstsection" class=" reverser">
 {% for quotes in site.quotes %}
-<div class="grid">
-  <div class="bacground-image col-6" style="background-image:url('{{quotes.pic}}')">
+<div class="grid-middle-spaceAround">
+  <div class="bacground-image col-5 quotes-pic" style="background-image:url('{{quotes.pic}}')">
   </div>
-  <div class="col-6">
+  <div class="col-5">
     <h2>{{quotes.title}}</h2>
     <p>{{quotes.quote}}</p>
     <p>{{quotes.author}}</p>
@@ -15,8 +16,12 @@ banner: /Images/iocquote.jpg
 </div>
 {% endfor %}
 </section>
+{% include fancyline.html %}
+<div class="centerText col-12">
+  <a href="#Pin"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+</div>
 
-<section class ="Pinterest">
+<section id="Pin" class ="Pinterest">
   <script
     type="text/javascript"
     async defer

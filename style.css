@@ -10,12 +10,12 @@ img{
 }
 a{
   text-decoration: none;
-  color: white;
+  color: red;
 }
 /* universals*/
 
 section,footer{
-  padding: 2% 5% ;
+  padding: 2% 5% 4% 5% ;
   position:relative;
 }
 
@@ -23,7 +23,11 @@ nav{
   text-align: center;
 }
 
-
+.flex-center{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
 
 /*typography*/
 
@@ -41,6 +45,9 @@ h2{
 h3{
   font-size: 1.7rem;
 }
+h3 span{
+  display: block;
+}
 
 /* modular classes*/
 
@@ -54,6 +61,26 @@ h3{
 }
 .blogpic{
 height: 20vw;
+transition:2s;
+}
+
+.blogpic h2{
+  opacity:0;
+  color: white;
+  transition:2s;
+}
+
+.blogpic:hover{
+  filter:grayscale();
+}
+.blogpic:hover h2{
+  opacity:1;
+}
+
+.smalltextfix{
+  font-size: 20px;
+  margin: 5% auto;
+  width:60%;
 }
 
 .full-width{
@@ -73,7 +100,7 @@ height: 20vw;
   font-size: 16px;
 }
 
-#blog h2, .blog h3{
+.blog-pic{
   background-size: contain;
 
   min-height: 23vw;
@@ -84,11 +111,28 @@ height: 20vw;
 
 .banner{
   background-size: cover;
-  background-position: bottom;
+  background-position: 50% 50%;
+  background-attachment: fixed;
   position:relative;
   z-index: 99;
   min-height: 100vh;
   padding:0;
+  overflow: hidden;
+
+}
+
+.banner a{
+  transition: 2s;
+}
+
+.banner a:hover{
+transform: scale(1.5) translatey(12px);
+
+}
+
+.banner.small{
+  min-height: 20vh;
+  z-index: 0;
 }
 
 .lowerbanner{
@@ -102,9 +146,8 @@ height: 20vw;
 .fa-angle-double-down {
   font-size: 2rem;
   position: absolute;
-  bottom: 5px;
-  color:grey;
-  left: calc(50vw - 0.7rem);
+  bottom: 0px;
+  color: grey;
 }
 
 .banner .fa-angle-double-down {
@@ -115,6 +158,12 @@ height: 20vw;
   left: calc(50vw - 1.2rem);
 }
 
+.about{
+  margin:auto;
+  width: 80%;
+  position: relative;
+  border:8px dotted black;
+}
 /* footer*/
 a.top-button {
   position: fixed;
@@ -134,22 +183,66 @@ a.top-button:hover {
   background-color: #555;
 }
 
+footer .fa{
+  padding:2%;
+  font-size: 1.5rem;
+
+}
 form{
   position: relative;
 }
 
-.inputdiamond{
-  position: absolute;
-bottom: -22px;
-right: 16vw;
+input{
+  margin-bottom:17px;
 }
 
+.inputdiamond{
+  position: absolute;
+  bottom: -22px;
+  right: 16vw;
+  transform: rotateZ(45deg);
+  background-color: pink;
+  height: 40px;
+  width: 40px;
+  display:flex !important;
+  justify-content: center;
+  align-items: center
+}
+.inputdiamond input{
+  transform: rotateZ(-45deg);
+  background-color: rgba(0,0,0,0);
+  border: 0px;
+  margin: 0;
+}
 /* quote section*/
 
-.reverser .grid:nth-child(odd){
+.reverser .grid-middle-spaceAround:nth-child(odd){
   flex-direction: row-reverse;
 }
 
+.thequote{
+  padding: 2%;
+  position: relative;
+  border:8px dotted black;
+}
+
+.quoted {
+  font-size: 15px;
+}
+
+.thequote a{
+  position: absolute;
+right: 0%;
+bottom: -48%;
+}
+
+.quotes-pic{
+    background-image: url(/Images/Roosevelt.tif);
+    min-height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .Pinterest > span{
     width:548px!important;
     margin:auto;

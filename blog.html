@@ -1,20 +1,27 @@
 ---
 layout: default
+pagepic: /Images/lalaguna2.jpg
+banner: /Images/IMG_2679.jpg
 title: Blog page
+subtitle: Adventures in Bali
+sidebarpic: /Images/monkeytemple.jpg
+sidebaralt: Monkey sactuary temple
+
 ---
-<section class="grid">
+<section id="firstsection" class="grid">
   <div class="col-7">
     <h2>{{page.subtitle}}</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor i /Images/ncididunt ut labore et dolore magna aliqua. Ut enim ad minim rehenderveniam, quis nostrud exercitation ullamco labor
+      is nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
   </div>
   <div class="col-3">
-    <img src="https://unsplash.it/600/300/?random" alt="My hover"/>
+    <img src="/Images/lalaguna2.jpg" alt="My hover"/>
   </div>
 </section>
 {% include fancyline.html %}
-<section class="grid-spaceAround">
+<section id="blog" class="grid-spaceAround">
 {% for post in site.posts %}
 <div class="col-3 blog">
   <a href="{{post.url}}">
@@ -25,3 +32,15 @@ title: Blog page
 </div>
 {% endfor %}
 </section>
+
+<!-- THIS IS FOR ARCHIVING BLOGS: -->
+<!-- <h2> Travel posts</h2>
+{% for post in site.categories.travel limit:3 %}
+<div class="col-3 blog">
+  <a href="{{post.url}}">
+    <div class ="centerText" style="background-image:url('{{post.pagepic}}')">
+    <h3> {{post.title}} </h3>
+    </div>
+  </a>
+</div>
+{% endfor %} -->

@@ -36,6 +36,9 @@
           <li>
             <a href="/blog.html">Blog</a>
           </li>
+          <li>
+            <a href="/quotes.html">Quotes</a>
+          </li>
         <ul>
       </div>
     </nav>
@@ -62,44 +65,52 @@
         </div>
     </section>
       <!--end of banner section -->
-    <img class="fancyline" src="/Images/line.jpg" alt="fancy line">
+    <!-- <img class="fancyline" src="/Images/line.jpg" alt="fancy line"> -->
+
+<section class="banner small" style="background-image:url('Images/sunset.jpg')">
+</section>
 
   </header>
     <!--end of header-->
     <!-- start of about section -->
 <section id="firstsection" class="about">
-  <h2>About...</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <h2>Welcome, fellow wanderer...</h2>
+  <p class="smalltextfix">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
   <div class="centerText">
     <a href="#blog"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
   </div>
 </section>
 <!-- end of about section -->
-<div class="subscribe offscreen">
+<!-- <div class="subscribe offscreen">
 <h2>subscribe</h2>
-</div>
+</div> -->
+<!-- <img class="fancyline" src="/Images/line.jpg" alt="fancy line"> -->
+
+<section class="banner small" style="background-image:url('Images/sunset.jpg')">
+</section>
+
 <!-- section with images that link to pages -->
 <section id="blog" class="pages grid-spaceAround">
-
+<h2 class="col-12">blogs</h2>
   
-  <a class="col-3" href="/2017/08/25/Activities.html">
-    <div class="centerText" style="background-image:url('/Images/lalaguna2.jpg')">
+  <a class="col-3_sm-12" href="/2017/08/25/Activities.html">
+    <div class="blogpic centerText flex-center" style="background-image:url('/Images/lalaguna2.jpg')">
       <h2>Activities</h2>
-      <h3></h3>
+      <!-- <h3></h3> -->
     </div>
   </a>
   
-  <a class="col-3" href="/2017/08/24/Food.html">
-    <div class="centerText" style="background-image:url('/Images/IMG_1928.jpg')">
+  <a class="col-3_sm-12" href="/food/2017/08/24/Food.html">
+    <div class="blogpic centerText flex-center" style="background-image:url('/Images/IMG_1928.jpg')">
       <h2>Food</h2>
-      <h3></h3>
+      <!-- <h3></h3> -->
     </div>
   </a>
   
-  <a class="col-3" href="/2017/08/23/Travel.html">
-    <div class="centerText" style="background-image:url('/Images/prettygateway.jpg')">
+  <a class="col-3_sm-12" href="/travel/2017/08/23/Travel.html">
+    <div class="blogpic centerText flex-center" style="background-image:url('/Images/prettygateway.jpg')">
       <h2>Travel</h2>
-      <h3></h3>
+      <!-- <h3></h3> -->
     </div>
   </a>
   
@@ -108,20 +119,22 @@
   </div>
 </section>
 <!--End of images section -->
-<img class="fancyline" src="/Images/line.jpg" alt="fancy line">
+<!-- <img class="fancyline" src="/Images/line.jpg" alt="fancy line"> -->
+
+<section class="banner small" style="background-image:url('Images/sunset.jpg')">
+</section>
 
 <!-- section with quote -->
 <section id="quotes" class="grid-center quotes">
   <div class="col-6 thequote">
-  <!-- <img class="fancyline" src="/Images/line.jpg" alt="fancy line">
- -->
-    <h3>some sort of quote</h3>
-    <!-- <img class="fancyline" src="/Images/line.jpg" alt="fancy line">
- -->
+    <h3 class="quoted">"Close your eyes. Fall in love. Stay there"<span>- RUMI</span></h3>
     <h3 class="rightText"><a class="button" href="/quotes.html">more</a></h3>
   </div>
 </section>
-<img class="fancyline" src="/Images/line.jpg" alt="fancy line">
+<!-- <img class="fancyline" src="/Images/line.jpg" alt="fancy line"> -->
+
+<section class="banner small" style="background-image:url('Images/sunset.jpg')">
+</section>
 
 <!-- contact section -->
 <section id="contact">
@@ -131,11 +144,14 @@
       <p>reason for why they should get in touch</p>
     </div>
     <div class="col-8">
-      <form class="grid" action ="https://formspree.io/your@email.com"method="POST">
-        <input class="col-8" type="text" name="name" placeholder="Your name">
-        <input class="col-8" type="email" name="_replyto" placeholder="Your email">
-        <textarea class="col-8" name="message" placeholder="Your message"></textarea>
-        <input class="inputdiamond" type="submit" value="Send">
+      <form class="grid" action ="https://formspree.io/amina_begum@hotmail.com"method="POST">
+        <input class="col-9" type="text" name="name" placeholder="Your name">
+        <input class="col-9" type="email" name="_replyto" placeholder="Your email">
+        <textarea class="col-9" name="message" placeholder="Your message"></textarea>
+        <div class="inputdiamond">
+          <input type="submit" value="Send">
+        </div>
+
       </form>
     </div>
   </div>

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<section id="blog" class="pages grid-spaceAround">
+  {% for post in page.posts limit:3 %}
+  <div class="col-3 blog">
+    <a href="{{post.url}}">
+    <div class ="centerText" style="background-image:url('{{post.pagepic}}')">
+    <h3> {{post.title}} </h3>
+    </div>
+  </a>
+</div>
+{% endfor %}
+</section>
