@@ -51,6 +51,11 @@ h3 span{
 
 /* modular classes*/
 
+.me{
+  border: 8px dotted black;
+  margin: 5%auto;
+  width: 80%
+}
 .centerText{
   text-align:center;
   background-size: cover;
@@ -164,6 +169,17 @@ transform: scale(1.5) translatey(12px);
   position: relative;
   border:8px dotted black;
 }
+
+/*Contact section*/
+#contact{
+  margin:5%auto;
+  width: 65%;
+  border:8px dotted black;
+}
+#contact p{
+  padding: 15%;
+}
+
 /* footer*/
 a.top-button {
   position: fixed;
@@ -199,7 +215,7 @@ input{
 .inputdiamond{
   position: absolute;
   bottom: -22px;
-  right: 16vw;
+  right: 10vw;
   transform: rotateZ(45deg);
   background-color: pink;
   height: 40px;
@@ -229,6 +245,29 @@ input{
 .quoted {
   font-size: 15px;
 }
+.quotediamond{
+  position: absolute;
+  bottom: -22px;
+  right: 16vw;
+  transform: rotateZ(45deg);
+  background-color: pink;
+  height: 40px;
+  width: 40px;
+  display:flex !important;
+  justify-content: center;
+  align-items: center
+}
+.quotediamond span{
+  transform: rotateZ(-45deg);
+  background-color: rgba(0,0,0,0);
+  border: 0px;
+  margin: 0;
+}
+
+.quotediamond:hover,.inputdiamond:hover{
+    background-color: #555;
+   }
+
 
 .thequote a{
   position: absolute;

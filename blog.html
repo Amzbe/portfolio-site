@@ -19,14 +19,19 @@ sidebaralt: Monkey sactuary temple
   <div class="col-3">
     <img src="/Images/lalaguna2.jpg" alt="My hover"/>
   </div>
+  <div class="centerText col-12">
+    <a href="#blog"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+  </div>
 </section>
+
 {% include fancyline.html %}
 <section id="blog" class="grid-spaceAround">
+  <h2 class="col-12"> Other Blogs</h2>
 {% for post in site.posts %}
 <div class="col-3 blog">
   <a href="{{post.url}}">
-    <div class ="centerText" style="background-image:url('{{post.pagepic}}')">
-    <h3> {{post.title}} </h3>
+    <div class ="centerText blogpic flex-center" style="background-image:url('{{post.pagepic}}')">
+    <h2> {{post.title}} </h2>
     </div>
   </a>
 </div>
