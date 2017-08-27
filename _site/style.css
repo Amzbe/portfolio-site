@@ -10,14 +10,39 @@ img{
 }
 a{
   text-decoration: none;
-  color: red;
+  color: pink;
 }
 /* universals*/
+body {
+  color: rgb(60,60,60);
+font-family: Roboto;
+font-weight:300;
+}
+
+section{
+  padding: 5% 5% 8% 5%;
+  text-align: center;
+  position:relative;
+
+}
+
+.border{
+  border: 3px solid pink;
+  padding: 3%;
+}
 
 section,footer{
-  padding: 2% 5% 4% 5% ;
-  position:relative;
+  /*padding: 2% 5% 4% 5% ;
+  position:relative;*/
 }
+
+
+/* TODO replace all dotted border styles */
+/*.dotted-border {
+  padding: 3%;
+  margin:3%;
+  border: 8px dotted black;
+}*/
 
 nav{
   text-align: center;
@@ -33,6 +58,9 @@ nav{
 
 h1,h2,h3,h4,h5,h6{
   text-align:center;
+  font-family: "Roboto Slab";
+  font-weight:300;
+  margin-bottom: 0.5rem;
 }
 h1{
   font-size:2.5rem;
@@ -51,10 +79,14 @@ h3 span{
 
 /* modular classes*/
 
+.rel{
+  position: relative;
+}
+
 .me{
-  border: 8px dotted black;
-  margin: 5%auto;
-  width: 80%
+  /*border: 8px dotted black;
+  margin: 5%auto;*/
+  /*width: 80%;*/
 }
 .centerText{
   text-align:center;
@@ -84,17 +116,17 @@ transition:2s;
 
 .smalltextfix{
   font-size: 20px;
-  margin: 5% auto;
-  width:60%;
+  /*margin: 5% auto;
+  width:60%;*/
 }
 
 .full-width{
-  width: 100%;
+  /*width: 100%;*/
 }
 .fancyline{
   display: block;
-  margin: auto;
-  width:300px;
+  /*margin: auto;
+  width:300px;*/
 }
 
 .button{
@@ -114,34 +146,54 @@ transition:2s;
 
 /*header*/
 
+header {
+  position: relative;
+}
+
 .banner{
   background-size: cover;
   background-position: 50% 50%;
   background-attachment: fixed;
   position:relative;
   z-index: 99;
-  min-height: 100vh;
   padding:0;
   overflow: hidden;
-
+  color: white;
 }
 
-.banner a{
-  transition: 2s;
+.banner a {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-weight:400;
+  color: white;
+  letter-spacing: 1px;
 }
 
-.banner a:hover{
-transform: scale(1.5) translatey(12px);
-
+.main-nav a:hover,.burger-menu a:hover{
+  border-bottom: 3px solid pink;
 }
 
+header .main-nav {
+  padding: 1% 5%;
+}
+
+.main-nav a {
+
+}
 .banner.small{
-  min-height: 20vh;
+  min-height: 40vh;
   z-index: 0;
+}
+.banner h2{
+  transform: translateY(15%);
 }
 
 .lowerbanner{
-  min-height: calc(100vh - 123px);
+  min-height: calc(100vh - 226px);
+}
+
+.lowerbanner h1{
+  transform: translateY(8%);
 }
 
 .lowerbanner .centerText{
@@ -151,7 +203,7 @@ transform: scale(1.5) translatey(12px);
 .fa-angle-double-down {
   font-size: 2rem;
   position: absolute;
-  bottom: 0px;
+  bottom: 6%;
   color: grey;
 }
 
@@ -164,20 +216,20 @@ transform: scale(1.5) translatey(12px);
 }
 
 .about{
-  margin:auto;
+  /*margin:auto;
   width: 80%;
   position: relative;
-  border:8px dotted black;
+  border:8px dotted black;*/
 }
 
 /*Contact section*/
 #contact{
-  margin:5%auto;
-  width: 65%;
-  border:8px dotted black;
+  /*margin:5%auto;
+  width: 65%;*/
+  /*border:8px dotted black;*/
 }
 #contact p{
-  padding: 15%;
+  /*padding: 15%;*/
 }
 
 /* footer*/
@@ -208,54 +260,80 @@ form{
   position: relative;
 }
 
-input{
-  margin-bottom:17px;
+#contact input,
+#contact textarea {
+ padding: 0.5rem;
+ margin-bottom: 0.3rem;
 }
 
 .inputdiamond{
   position: absolute;
   bottom: -22px;
-  right: 10vw;
+  right:0;
   transform: rotateZ(45deg);
   background-color: pink;
+  color: white;
   height: 40px;
   width: 40px;
   display:flex !important;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  z-index: 5;
 }
-.inputdiamond input{
+#contact .inputdiamond input{
   transform: rotateZ(-45deg);
   background-color: rgba(0,0,0,0);
   border: 0px;
   margin: 0;
+  color: white;
 }
 /* quote section*/
 
-.reverser .grid-middle-spaceAround:nth-child(odd){
+.reverser .fa{
+  bottom: -16px;
+    left: 50%;
+}
+
+.reverser{
+  padding:0;
+}
+.reverser .grid-middle-center{
+  margin:5%;
+}
+
+.reverser .grid-middle-center:nth-child(odd){
   flex-direction: row-reverse;
 }
 
+
 .thequote{
-  padding: 2%;
+  /*padding: 2%;
   position: relative;
-  border:8px dotted black;
+  border:8px dotted black;*/
 }
 
 .quoted {
   font-size: 15px;
 }
+
+.reverser p{
+  /*text-align: center;
+  padding: 5%;*/
+}
+
 .quotediamond{
+  color: white;
   position: absolute;
-  bottom: -22px;
-  right: 16vw;
+  bottom: -25px;
+  right: 26px;
   transform: rotateZ(45deg);
   background-color: pink;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   display:flex !important;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  z-index: 5;
 }
 .quotediamond span{
   transform: rotateZ(-45deg);
@@ -269,11 +347,7 @@ input{
    }
 
 
-.thequote a{
-  position: absolute;
-right: 0%;
-bottom: -48%;
-}
+
 
 .quotes-pic{
     background-image: url(/Images/Roosevelt.tif);
@@ -286,6 +360,8 @@ bottom: -48%;
     width:548px!important;
     margin:auto;
 }
+
+
 
 /*hamburger menu*/
 
@@ -387,6 +463,10 @@ left:5px;
 
   .mob-show{
     display:block;
+  }
+
+  .fa-angle-double-down{
+    display: none;
   }
 
 

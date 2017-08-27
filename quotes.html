@@ -5,23 +5,25 @@ banner: /Images/iocquote.jpg
 {% include fancyline.html %}
 <section id="firstsection" class=" reverser">
 {% for quotes in site.quotes %}
-<div class="grid-middle-spaceAround">
+<div id="{{ forloop.index0 }}" class="grid-middle-center rel">
   <div class="bacground-image col-5 quotes-pic" style="background-image:url('{{quotes.pic}}')">
   </div>
-  <div class="col-5">
+  <div class="col-5 rel">
     <h2>{{quotes.title}}</h2>
     <p>{{quotes.quote}}</p>
     <p>{{quotes.author}}</p>
+    <a href="#{{ forloop.index }}"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
   </div>
 </div>
+{% include fancyline.html %}
+{% include fancyline.html %}
+
+
 {% endfor %}
 </section>
 {% include fancyline.html %}
-<div class="centerText col-12">
-  <a href="#Pin"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
-</div>
 
-<section id="Pin" class ="Pinterest">
+<section id="3" class ="Pinterest">
   <script
     type="text/javascript"
     async defer
