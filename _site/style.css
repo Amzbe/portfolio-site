@@ -289,6 +289,10 @@ form{
 }
 /* quote section*/
 
+.quotes-banner h1{
+  margin: 23vh 0 -23vh 0;
+}
+
 .reverser .fa{
   bottom: -16px;
     left: 50%;
