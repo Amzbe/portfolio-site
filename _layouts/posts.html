@@ -11,17 +11,16 @@ layout: default
   </div>
 </section>
 {% include fancyline.html %}
-<section class="box">
-  <h2>recent blog posts</h2>
-  <div class="grid">
-    {% for post in site.posts %}
-    <div class="col-3">
-      <a href="{{post.url}}">
-        <div style="background-image:url('{{post.pagepic}}')">
-        <h3> {{post.title}} </h3>
-        </div>
-      </a>
+<section id="blog" class="pages">
+<div class="border grid">
+<h2 class="col-12">blogs</h2>
+  {% for post in site.posts limit:3 %}
+  <a class="col-4_sm-12" href="{{post.url}}">
+    <div class="blogpic centerText flex-center" style="background-image:url('{{post.pagepic}}')">
+      <h2>{{post.title}}</h2>
+      <!-- <h3>{{post.linkname}}</h3> -->
     </div>
-    {% endfor %}
+  </a>
+  {% endfor %}
   </div>
 </section>
