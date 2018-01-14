@@ -7,7 +7,9 @@ layout: default
     {{content}}
   </div>
   <div class="col-3">
-    <img src="{{page.sidebarpic}}" alt="{{page.sidebaralt}}"/>
+    {%for pic in page.sidebar%}
+    <img src="{{pic.pic}}" alt="{{pic.alt}}"/>
+    {% endfor %}
   </div>
 </section>
 {% include fancyline.html %}
